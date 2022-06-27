@@ -75,49 +75,49 @@ int main(int argc, char *argv[]) {
   bool m_isToFLidar = false;
   bool m_Inverted = true;
 
-  node->declare_parameter("port");
+  node->declare_parameter<std::string>("port");
   node->get_parameter("port", port);
 
-  node->declare_parameter("frame_id");
+  node->declare_parameter<std::string>("frame_id");
   node->get_parameter("frame_id", frame_id);
 
-  node->declare_parameter("ignore_array");
+  node->declare_parameter<std::string>("ignore_array");
   node->get_parameter("ignore_array", list);
 
-  node->declare_parameter("baudrate");
+  node->declare_parameter<int>("baudrate");
   node->get_parameter("baudrate", baudrate);
 
-  node->declare_parameter("samp_rate");
+  node->declare_parameter<int>("samp_rate");
   node->get_parameter("samp_rate", samp_rate);
 
-  node->declare_parameter("resolution_fixed");
+  node->declare_parameter<bool>("resolution_fixed");
   node->get_parameter("resolution_fixed", resolution_fixed);
 
-  node->declare_parameter("singleChannel");
+  node->declare_parameter<bool>("singleChannel");
   node->get_parameter("singleChannel", m_singleChannel);
 
-  node->declare_parameter("auto_reconnect");
+  node->declare_parameter<bool>("auto_reconnect");
   node->get_parameter("auto_reconnect", auto_reconnect);
 
-  node->declare_parameter("reversion");
+  node->declare_parameter<bool>("reversion");
   node->get_parameter("reversion", reversion);
 
-  node->declare_parameter("isToFLidar");
+  node->declare_parameter<bool>("isToFLidar");
   node->get_parameter("isToFLidar", m_isToFLidar);
 
-  node->declare_parameter("angle_max");
+  node->declare_parameter<double>("angle_max");
   node->get_parameter("angle_max", angle_max);
 
-  node->declare_parameter("angle_min");
+  node->declare_parameter<double>("angle_min");
   node->get_parameter("angle_min", angle_min);
 
-  node->declare_parameter("max_range");
+  node->declare_parameter<double>("max_range");
   node->get_parameter("max_range", max_range);
 
-  node->declare_parameter("min_range");
+  node->declare_parameter<double>("min_range");
   node->get_parameter("min_range", min_range);
 
-  node->declare_parameter("frequency");
+  node->declare_parameter<double>("frequency");
   node->get_parameter("frequency", frequency);
 
 
